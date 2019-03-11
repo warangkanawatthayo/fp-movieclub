@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Movie Club Events</h2>
+<table class='table'>
+
+    <tr>
+        <th>Event Title</th>
+        <th>Location</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Description</th>
+    </tr>
+
+{% for item in event_list %}
+    <tr>
+        <td>{{ item.eventtitle }}</td>
+        <td>{{ item.eventlocation }}</td>
+        <td>{{ item.eventdate }}</td>
+        <td>{{ item.eventtime }}</td>
+        <td>{{ item.eventdescription }}</td>
+    </tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}

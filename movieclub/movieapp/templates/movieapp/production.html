@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Production</h2>
+<table class='table'>
+
+    <tr>
+        <th>Producername</th>
+        <th>Directorname</th>
+        <th>Productionlocation</th>
+        <th>movie</th>
+    </tr>
+
+{% for item in production_list %}
+    <tr>
+        <td>{{ item.producername }}</td>
+        <td>{{ item.directorname }}</td>
+        <td>{{ item.productionlocation }}</td>
+        <td>Coming soon</td>
+    </tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}
