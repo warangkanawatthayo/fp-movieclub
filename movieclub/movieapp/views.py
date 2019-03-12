@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 def index(request):
     return render(request, 'movieapp/index.html')
 
-def movietypes (request):
+def movietype (request):
     movietype_list=MovieType.objects.all()
     return render (request, 'movieapp/movietype.html', {'movietype_list':movietype_list})
 
@@ -24,7 +24,7 @@ def event(request):
     event_list = Event.objects.all()
     return render(request, 'movieapp/event.html', {'event_list': event_list})
 
-def reviews(request):
+def review(request):
     review_list = MovieReview.objects.all()
     return render(request, 'movieapp/review.html', {'review_list': review_list})
 
