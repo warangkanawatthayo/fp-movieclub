@@ -47,6 +47,8 @@ def newEvent(request):
         form=EventForm()
     return render(request, 'movieapp/newevent.html', {'form': form})
 
+# new rewivew
+@login_required
 def newReview(request):
     form=ReviewForm
     if request.method=='POST':
